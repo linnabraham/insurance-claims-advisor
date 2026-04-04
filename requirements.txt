@@ -1,0 +1,2 @@
+-e git+ssh://git@github.com/linnabraham/insurance-claim-advisor.git@3099269004a369dc1e98ce0e2e7b50dcdac1f2ee#egg=claims_advisor
+ruff==0.15.9
