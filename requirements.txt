@@ -8,7 +8,7 @@ cachetools==7.0.5
 certifi==2026.2.25
 cfgv==3.5.0
 charset-normalizer==3.4.7
--e git+ssh://git@github.com/linnabraham/insurance-claim-advisor.git@1314c5df079d81caf80f59af40d6dcce76e37743#egg=claims_advisor
+-e git+ssh://git@github.com/linnabraham/insurance-claim-advisor.git@bdf49af34f92b724ef5b2accf39f1b72bd27948e#egg=claims_advisor
 click==8.3.2
 distlib==0.4.0
 fastapi==0.135.3
