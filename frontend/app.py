@@ -1,7 +1,14 @@
-"""Streamlit frontend for the Claims Triage application."""
+"""Streamlit frontend for the Claims Triage and Decision Support application."""
+
+import os
 
 import requests
 import streamlit as st
+from dotenv import load_dotenv
+
+load_dotenv()
+
+BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8000")
 
 st.set_page_config(
     page_title="Claims Advisor",
@@ -44,5 +51,5 @@ if analyze_button:
     st.write("_Placeholder: system confidence level._")
 
 if st.button("Check API Health"):
-    response = requests.get("http://localhost:8010/health")
+    response = requests.get(f"{BACKEND_URL}/health")
     st.json(response.json())
