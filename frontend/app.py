@@ -1,3 +1,6 @@
+"""Streamlit frontend for the Claims Triage application."""
+
+import requests
 import streamlit as st
 
 st.set_page_config(
@@ -39,3 +42,7 @@ if analyze_button:
 
     st.subheader("Confidence Indicator")
     st.write("_Placeholder: system confidence level._")
+
+if st.button("Check API Health"):
+    response = requests.get("http://localhost:8010/health")
+    st.json(response.json())
